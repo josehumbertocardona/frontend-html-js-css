@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería SENA - Crear Cuenta</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/estiloregistro.css">
+</head>
+<body>
+    <main class="register-container">
+        <!-- PANEL DE INFORMACIÓN -->
+        <section class="info-panel">
+            <div class="info-content">
+                <div class="info-logo">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <h1>Únete a Nosotros</h1>
+                <p>Peluquería Sena</p>
+                <span>
+                    Crea tu cuenta para gestionar tus citas, ver nuestros servicios y disfrutar de una atención profesional y creativa.
+                </span>
+            </div>
+        </section>
+
+        <!-- PANEL DE REGISTRO -->
+        <section class="register-panel">
+            <div class="register-box">
+                <div class="logo-text">CREAR CUENTA</div>
+                <div class="subtitulo">Completa tus datos para registrarte</div>
+
+                <!-- MENSAJE DE ERROR -->
+                <div id="mensajeError" class="mensaje-error" style="display: none;">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="textoError"></span>
+                </div>
+
+                <!-- MENSAJE DE ÉXITO -->
+                <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>¡Cuenta creada con éxito! Redirigiendo al login...</span>
+                </div>
+
+                <!-- FORMULARIO -->
+                <form id="registroForm">
+                    <!-- t1: Tipo de Documento -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-id-card"></i>
+                        <select id="t1" name="t1" required>
+                            <option value="" disabled selected>Tipo de Documento</option>
+                            <option value="CC">CC (Cédula de Ciudadanía)</option>
+                            <option value="TI">TI (Tarjeta de Identidad)</option>
+                            <option value="CE">CE (Cédula de Extranjería)</option>
+                        </select>
+                    </div>
+
+                    <!-- t2: Número de Documento -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <input type="text" id="t2" name="t2" placeholder="Número de documento" 
+                               pattern="\d{8,10}" title="Debe tener entre 8 y 10 dígitos numéricos" required>
+                    </div>
+
+                    <!-- t3: Nombres Completos -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="t3" name="t3" placeholder="Nombres y apellidos" 
+                               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,100}" title="Solo letras, entre 3 y 100 caracteres" required>
+                    </div>
+
+                    <!-- t4: Dirección -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="t4" name="t4" placeholder="Dirección de residencia" 
+                               pattern="[A-Za-z0-9ÁÉÍÓÚáéíóúÑñ\s.,#\/ºª\-]{5,200}" title="Mínimo 5 caracteres. Ej: Calle 10 # 20-30" required>
+                    </div>
+
+                    <!-- t5: Teléfono -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="t5" name="t5" placeholder="Teléfono (10 dígitos)" 
+                               pattern="\d{10}" title="Debe tener exactamente 10 dígitos numéricos" required>
+                    </div>
+
+                    <!-- t6: Correo Electrónico -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="t6" name="t6" placeholder="Correo electrónico" maxlength="250" required>
+                    </div>
+
+                    <!-- t7: Contraseña -->
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="t7" name="t7" placeholder="Contraseña" 
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" 
+                               title="Mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 símbolo especial" required>
+                               
+                    </div>
+                        <p class="nota-password">Debe tener: 8+ caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 símbolo.</p>
+                    <!-- BOTÓN -->
+                    <button type="submit" class="btn" id="btnSubmit">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Registrarme</span>
+                    </button>
+                </form>
+
+                <div class="registro">
+                    <p>¿Ya tienes una cuenta?</p>
+                    <a href="login.html">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Iniciar Sesión.
+                    </a>
+                </div>
+
+                <div class="footer">
+                    Instructor Ing (Esp, Mag) Guillo (SENA) © 2026
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/jsnuevocliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería SENA</title>
+    
+    <!-- 🛡️ SCRIPT DE SEGURIDAD (Bloquea el acceso si no hay token) -->
+    <script>
+        const token = localStorage.getItem('tokenSena');
+        const usuario = localStorage.getItem('usuarioSena');
+
+        // Si FALTA el token O FALTA el usuario, NO está logueado
+        if (!token || !usuario) {
+            // Redirección inmediata y sin dejar rastro en el historial del navegador
+            window.location.replace('login.html');
+        }
+    </script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GOOGLE FONTS (Para un toque más elegante) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- TU HOJA DE ESTILOS -->
+    <link rel="stylesheet" href="./css/estilomenu.css">
+</head>
+<body>
+
+    <!-- Overlay para cerrar menú en móvil -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- MENÚ LATERAL (SIDEBAR) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-scissors"></i>
+                <span>SENA</span>
+            </div>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li>
+                <a href="#" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Mis Citas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Historial</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span>Mi Perfil</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" onclick="cerrarSesion()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Cerrar Sesión</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- Header Superior -->
+        <header class="top-header">
+            <button class="menu-toggle" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="user-info">
+                <div style="text-align: right;">
+                    <h2 id="nombreUsuarioDisplay">Cargando...</h2>
+                    <span>Cliente Registrado</span>
+                </div>
+                <div class="user-avatar" id="inicialUsuario">
+                    C
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido del Dashboard -->
+        <div class="dashboard-content">
+            <!-- Banner de Bienvenida -->
+            <div class="welcome-banner">
+                <h1>¡Hola de nuevo! 👋</h1>
+                <p>Bienvenido a tu espacio personal. Aquí puedes gestionar tus citas y ver el historial de tus servicios en la Peluquería SENA.</p>
+            </div>
+
+            <!-- Tarjetas de Información -->
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <h3>Próxima Cita</h3>
+                    <p>No tienes citas pendientes</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Servicios Realizados</h3>
+                    <p>0 Servicios</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3>Estado de Cuenta</h3>
+                    <p>Al día</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TU ARCHIVO DE LÓGICA JAVASCRIPT -->
+    <script src="./js/jsmenu.js"></script>
+</body>
+</html>
