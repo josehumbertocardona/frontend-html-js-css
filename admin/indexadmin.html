@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Peluquería SENA</title>
+    <!-- Vinculamos los estilos del admin -->
+    <link rel="stylesheet" href="../css/estiloadmin.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <!-- Sidebar / Menú Lateral del Administrador -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>✂ SENA Admin</h2>
+            </div>
+            <nav class="menu">
+                <a href="indexadmin.html" class="activo">Dashboard</a>
+                <a href="gestiontrabajadores.html">Trabajadores</a>
+                <a href="gestionservicios.html">Servicios</a>
+                <a href="../login.html" class="btn-salir">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Central -->
+        <main class="contenido">
+            <!-- Barra Superior del Administrador -->
+            <header class="barra-superior">
+                <div class="info-usuario">
+                    <span class="nombre-usuario">Administrador</span>
+                    <span class="rol-usuario">Control Total del Sistema</span>
+                </div>
+                <div class="avatar-usuario">A</div>
+            </header>
+
+            <header class="encabezado">
+                <h1>Panel de Control</h1>
+                <p>Resumen general de la operación en la Peluquería SENA.</p>
+            </header>
+
+            <!-- Tarjetas de Estadísticas / Métricas -->
+            <section class="grid-tarjetas">
+                <div class="tarjeta-metrica">
+                    <div class="icono-metrica">📅</div>
+                    <div class="info-metrica">
+                        <h3>Citas Hoy</h3>
+                        <p class="valor">12</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-metrica">
+                    <div class="icono-metrica">👥</div>
+                    <div class="info-metrica">
+                        <h3>Trabajadores Activos</h3>
+                        <p class="valor">5</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta-metrica">
+                    <div class="icono-metrica">✨</div>
+                    <div class="info-metrica">
+                        <h3>Servicios Ofrecidos</h3>
+                        <p class="valor">8</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* ==========================================
+   ESTILOS GENERALES Y ESTRUCTURA
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #333333;
+}
+
+.contenedor-principal {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar / Menú Lateral con estilo del profesor Guillermo */
+.sidebar {
+    width: 260px;
+    background-color: #b85b00;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Enlaces del menú con efecto flotante y relieve amarillo a la izquierda */
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #a85100;
+    transform: translateY(-2px);
+    box-shadow: -4px -4px 0px 0px #ffcc00, 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu a:active {
+    transform: translateY(1px);
+    box-shadow: -2px -2px 0px 0px #ffcc00;
+}
+
+/* Contenido Central */
+.contenido {
+    margin-left: 260px;
+    flex: 1;
+    padding: 2.5rem;
+}
+
+/* Barra Superior del Usuario */
+.barra-superior {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2.5rem;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nombre-usuario {
+    font-weight: 700;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.rol-usuario {
+    font-size: 0.8rem;
+    color: #b85b00;
+}
+
+.avatar-usuario {
+    width: 45px;
+    height: 45px;
+    background-color: #d96b00;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Encabezado de la Sección */
+.encabezado {
+    margin-bottom: 2rem;
+}
+
+.encabezado h1 {
+    font-size: 2rem;
+    color: #b85b00;
+    margin-bottom: 0.3rem;
+}
+
+.encabezado p {
+    color: #666666;
+}
+
+/* ==========================================
+   TARJETA Y BOTONES DE BAJA CON ESTILO 3D
+   ========================================== */
+
+.tarjeta-baja {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 650px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #d9534f;
+}
+
+.tarjeta-baja h2 {
+    color: #d9534f;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.tarjeta-baja p {
+    color: #555555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.acciones-baja {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Botón Eliminar con relieve 3D */
+.btn-eliminar {
+    background-color: #d9534f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #b52b27;
+    transition: all 0.15s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #e35d59;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 #b52b27;
+}
+
+.btn-eliminar:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #b52b27;
+}
+
+/* Botón Volver / Cancelar con relieve 3D */
+.btn-volver {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #e0e0e0;
+    color: #333333;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 0 #b0b0b0;
+    transition: all 0.15s ease;
+}
+
+.btn-volver:hover {
+    background-color: #ebebeb;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 0 #b0b0b0;
+}
+
+.btn-volver:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #b0b0b0;
+}

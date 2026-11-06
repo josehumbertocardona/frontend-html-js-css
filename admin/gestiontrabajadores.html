@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Trabajadores - Peluquería SENA</title>
+    <!-- Estilos centralizados del admin -->
+    <link rel="stylesheet" href="../css/estiloadmin.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <!-- Sidebar / Menú Lateral del Administrador -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>✂ SENA Admin</h2>
+            </div>
+            <nav class="menu">
+                <a href="indexadmin.html">Dashboard</a>
+                <a href="gestiontrabajadores.html" class="activo">Trabajadores</a>
+                <a href="gestionservicios.html">Servicios</a>
+                <a href="../login.html" class="btn-salir">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Central -->
+        <main class="contenido">
+            <!-- Barra Superior del Administrador -->
+            <header class="barra-superior">
+                <div class="info-usuario">
+                    <span class="nombre-usuario">Administrador</span>
+                    <span class="rol-usuario">Control Total del Sistema</span>
+                </div>
+                <div class="avatar-usuario">A</div>
+            </header>
+
+            <header class="encabezado">
+                <h1>Gestión de Trabajadores</h1>
+                <p>Módulo visual para registrar y administrar el personal activo según los requerimientos.</p>
+            </header>
+
+            <!-- Tarjeta de Formulario de Registro Completa -->
+            <section class="tarjeta-form" style="background-color: #ffffff; border-radius: 12px; padding: 2rem; max-width: 700px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+                <h2 style="color: #b85b00; margin-bottom: 1.5rem; font-size: 1.3rem;">Registrar Nuevo Trabajador</h2>
+                
+                <form>
+                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Tipo de Documento</label>
+                            <select style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none; background: #fff;">
+                                <option value="CC">CC</option>
+                                <option value="CE">CE</option>
+                                <option value="TI">TI</option>
+                            </select>
+                        </div>
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Número de Documento</label>
+                            <input type="text" placeholder="Ej. 11223344" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                        </div>
+                    </div>
+
+                    <div class="campo" style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label style="font-weight: 600; font-size: 0.9rem;">Nombres y Apellidos</label>
+                        <input type="text" placeholder="Nombre completo del empleado" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Dirección</label>
+                            <input type="text" placeholder="Dirección de residencia" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                        </div>
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Teléfono</label>
+                            <input type="text" placeholder="Número de contacto" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Correo Electrónico</label>
+                            <input type="email" placeholder="correo@sena.edu.co" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                        </div>
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Contraseña</label>
+                            <input type="password" placeholder="Contraseña de acceso" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none;">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Rol</label>
+                            <input type="text" value="Trabajador" readonly style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none; background: #f9f9f9; color: #666;">
+                        </div>
+                        <div class="campo" style="display: flex; flex-direction: column; gap: 0.4rem;">
+                            <label style="font-weight: 600; font-size: 0.9rem;">Estado</label>
+                            <input type="text" value="Activo" readonly style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 8px; outline: none; background: #f9f9f9; color: #666;">
+                        </div>
+                    </div>
+
+                    <div class="acciones">
+                        <button type="button" onclick="alert('Interfaz visual completa validada con éxito')" style="background-color: #d96b00; color: #ffffff; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 0 #a35000;">Guardar Trabajador</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

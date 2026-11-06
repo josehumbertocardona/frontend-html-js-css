@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darse de Baja - Peluquería SENA</title>
+    <link rel="stylesheet" href="css/estilomenu.css">
+    <link rel="stylesheet" href="css/estilobaja.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <!-- Sidebar / Menú Lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>✂ SENA</h2>
+            </div>
+            <nav class="menu">
+                <a href="menucliente.html">Inicio</a>
+                <a href="mis-citas.html">Mis Citas</a>
+                <a href="historial.html">Historial</a>
+                <a href="editarcliente.html">Mi Perfil</a>
+                <a href="bajacliente.html" class="activo">Darse de Baja</a>
+                <a href="login.html" class="btn-salir">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Central -->
+        <main class="contenido">
+            <!-- Barra Superior del Usuario -->
+            <header class="barra-superior">
+                <div class="info-usuario">
+                    <span class="nombre-usuario">humberto</span>
+                    <span class="rol-usuario">Cliente Registrado</span>
+                </div>
+                <div class="avatar-usuario">H</div>
+            </header>
+
+            <div class="encabezado">
+                <h1>Eliminar Cuenta</h1>
+                <p>Gestión de desactivación de cuenta de usuario.</p>
+            </div>
+
+            <!-- Tarjeta de Advertencia -->
+            <section class="tarjeta-baja">
+                <h2>¿Estás seguro de darte de baja?</h2>
+                <p>Esta acción eliminará permanentemente tus datos y tu historial de citas de la plataforma de la Peluquería SENA. Una vez realizada, no podrás recuperar tu cuenta y tendrás que registrarte nuevamente si deseas usar el sistema.</p>
+                
+                <div class="acciones-baja">
+                    <button type="button" class="btn-eliminar">Sí, darme de baja</button>
+                    <a href="menucliente.html" class="btn-volver">Cancelar</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

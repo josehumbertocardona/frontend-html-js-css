@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Peluquería SENA</title>
+    <!-- Usamos únicamente el CSS de editar para evitar conflictos de caché o estilos cruzados -->
+    <link rel="stylesheet" href="css/estiloeditar.css">
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <!-- Sidebar / Menú Lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>✂ SENA</h2>
+            </div>
+            <nav class="menu">
+                <a href="menucliente.html">Inicio</a>
+                <a href="mis-citas.html">Mis Citas</a>
+                <a href="historial.html">Historial</a>
+                <a href="editarcliente.html" class="activo">Mi Perfil</a>
+                <a href="bajacliente.html">Darse de Baja</a>
+                <a href="login.html">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Central -->
+        <main class="contenido">
+            <!-- Barra Superior del Usuario -->
+            <header class="barra-superior">
+                <div class="info-usuario">
+                    <span class="nombre-usuario">humberto</span>
+                    <span class="rol-usuario">Cliente Registrado</span>
+                </div>
+                <div class="avatar-usuario">H</div>
+            </header>
+
+            <header class="encabezado">
+                <h1>Editar Mis Datos</h1>
+                <p>Actualiza tu información personal en el sistema.</p>
+            </header>
+
+            <section class="tarjeta-form">
+                <form id="formEditarCliente">
+                    
+                    <!-- Tipo de Documento -->
+                    <div class="campo">
+                        <label for="tipo_documento">Tipo de Documento</label>
+                        <select id="tipo_documento" name="tipo_documento" required>
+                            <option value="" disabled selected>Seleccione tipo de documento</option>
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                        </select>
+                    </div>
+
+                    <!-- Número de Documento -->
+                    <div class="campo">
+                        <label for="documento">Número de documento</label>
+                        <input type="text" id="documento" name="documento" placeholder="Número de documento" required>
+                    </div>
+
+                    <!-- Nombres y Apellidos -->
+                    <div class="campo">
+                        <label for="nombre">Nombres y apellidos</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombres y apellidos" required>
+                    </div>
+
+                    <!-- Dirección de Residencia -->
+                    <div class="campo">
+                        <label for="direccion">Dirección de residencia</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Dirección de residencia" required>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="campo">
+                        <label for="telefono">Teléfono (10 dígitos)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono (10 dígitos)" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <!-- Correo Electrónico -->
+                    <div class="campo">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="correo@gmail.com" required>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div class="campo">
+                        <label for="password">Contraseña (Opcional)</label>
+                        <input type="password" id="password" name="password" placeholder="********">
+                        <small class="ayuda-password">Debe tener: 8+ caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 símbolo.</small>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="acciones">
+                        <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                        <a href="menucliente.html" class="btn-cancelar">Cancelar</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Vinculamos el archivo JS de edición -->
+    <script src="js/jseditarcliente.js"></script>
+</body>
+</html>
